@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "#!/usr/bin/python3" > main2.py
+echo $PYCODE >> main2.py
+python3.4 main2.py

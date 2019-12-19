@@ -12,4 +12,6 @@ def best_score(a_dictionary):
     for x in a_dictionary:
         if a_dictionary[x] == high:
             break
+    if high == 0:
+        return None
     return x

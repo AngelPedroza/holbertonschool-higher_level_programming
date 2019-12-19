@@ -3,22 +3,35 @@ def roman_to_int(roman_string):
     if type(roman_string) is not str or roman_string is None:
         return 0
 
-    res = 0
+    num = []
     for i in roman_string:
         if i == 'I':
-            res += 1
+            num.append(1)
         if i == 'V':
-            res += 5
+            num.append(5)
         if i == 'X':
-            res += 10
+            num.append(10)
         if i == 'L':
-            res += 50
+            num.append(50)
         if i == 'C':
-            res += 100
+            num.append(100)
         if i == 'D':
-            res += 500
+            num.append(500)
         if i == 'M':
-            res += 1000
-    if res < 1 or res > 3999:
-        return 0
+            num.append(1000)
+    res = 0
+    bool = False
+    for x in range(len(num)):
+        if bool is True:
+            bool = False
+            continue
+        if (x + 1) < len(num):
+            if num[x] < num[x + 1]:
+                res += num[x + 1] - num[x]
+                bool = True
+                continue
+            else:
+                res += num[x]
+        if (x + 1) == len(num):
+            res += num[x]
     return res

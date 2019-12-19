@@ -19,4 +19,6 @@ def roman_to_int(roman_string):
             res += 500
         if i == 'M':
             res += 1000
+    if res < 1 or res > 3999:
+        return 0
     return res

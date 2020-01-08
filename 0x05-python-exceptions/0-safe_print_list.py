@@ -8,7 +8,6 @@ def safe_print_list(my_list=[], x=0):
             print("{}".format(my_list[a]), end="")
             n += 1
         except:
-            print()
-            return n
+            break
     print()
     return n

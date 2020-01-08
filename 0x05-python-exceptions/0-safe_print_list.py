@@ -2,11 +2,13 @@
 def safe_print_list(my_list=[], x=0):
     if my_list == [] or x == 0:
         return 0
-    try:
-        for a in range(x):
+    n = 0
+    for a in range(x):
+        try:
             print("{}".format(my_list[a]), end="")
-    except:
-        a = a - 1
-    finally:
-        print()
-        return a + 1
+            n += 1
+        except:
+            print()
+            return n
+    print()
+    return n

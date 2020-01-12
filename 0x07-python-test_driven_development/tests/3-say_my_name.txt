@@ -1,0 +1,44 @@
+==========================
+Say my name
+==========================
+
+''The def say_my_name(first_name, last_name="")'' function
+print two string that give like a parameter. If you don't
+put last_name, the output works.
+
+Import the function
+=================================================================
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+==========================
+Type Error
+==========================
+
+First Name Error
+=================================================================
+	>>> say_my_name("Angel")
+	My name is Angel 
+
+	>>> say_my_name([])
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name({})
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name("")
+	My name is  
+
+Last Name Error
+=================================================================
+	>>> say_my_name("Angel", "Pedroza")
+	My name is Angel Pedroza
+
+	>>> say_my_name("Angel", [])
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name("Angel", {})
+	Traceback (most recent call last):
+	TypeError: last_name must be a string

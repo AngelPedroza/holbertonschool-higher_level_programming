@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 def text_indentation(text):
+    """
+    ''def text_indentation(text):'' Print a new line if
+    find the '.', ':' or '?'."""
     if type(text) is not str:
         raise TypeError("text must be a string")
     else:
@@ -13,5 +16,5 @@ def text_indentation(text):
                 L = i + 2
                 bool = True
 
-        if i + 1 == len(text) and bool == False:
+        if i + 1 == len(text) and bool is False:
             print(text)

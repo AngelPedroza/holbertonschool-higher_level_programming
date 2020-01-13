@@ -32,3 +32,8 @@ Error With Numbers
 	>>> print_square(1e34567)
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
+
+
+	>>> print_square("Hola")
+	Traceback (most recent call last):
+	TypeError: size must be an integer

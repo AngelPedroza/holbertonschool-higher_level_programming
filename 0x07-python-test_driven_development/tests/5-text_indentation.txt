@@ -1,0 +1,26 @@
+==========================
+Text Indentation
+==========================
+
+''def text_indentation(text):'' Print a new line if
+find the '.', ':' or '?'.
+
+Import the module
+=================================================================
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Error With text
+=================================================================
+	>>> text_indentation("hola")
+	hola
+	>>> text_indentation("hola.")
+	hola.
+	<BLANKLINE>
+	>>> text_indentation("hola.?")
+	hola.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	>>> text_indentation(76)
+	Traceback (most recent call last):
+	TypeError: text must be a string

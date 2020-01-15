@@ -5,15 +5,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Set a objet with width and height"""
 
-        if height < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.height = height
-
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):

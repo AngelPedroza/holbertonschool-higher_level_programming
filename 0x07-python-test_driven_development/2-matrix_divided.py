@@ -1,4 +1,4 @@
-#!/urs/bin/python3
+#!/usr/bin/python3
 def matrix_divided(matrix, div):
     """''def matrix_divided(matrix, div):'' divide each
     elelemt of the matrix is divided by div and

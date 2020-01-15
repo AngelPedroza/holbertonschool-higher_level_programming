@@ -19,6 +19,9 @@ class Rectangle:
         """Return a string fro printing"""
 
         string = ""
+        if self.__height == 0 or self.__width == 0:
+            return string
+
         for j in range(self.__height):
             for i in range(self.__width):
                 string += '#'

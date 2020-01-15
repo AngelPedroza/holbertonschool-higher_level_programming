@@ -5,22 +5,14 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Set a objet with width and height"""
 
-        if height < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.__height = height
-
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.__width = width
+        self.__height = height
+        self.__width = width
 
     def __repr__(self):
         """The function return a string that can be used for generate another
         object of this class"""
 
-        return "Rectangle" + '(' + str(self.__width) + ',' + \
-            str(self.__height) + ')'
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __str__(self):
         """Return a string fro printing"""

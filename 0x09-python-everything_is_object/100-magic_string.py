@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def magic_string():
-    class MS: o_string, string = " ,Holberton", "Holberton"
-        return 
+def magic_string(n=[]):
+    n += ["Holberton"]
+    return ", ".join(n)

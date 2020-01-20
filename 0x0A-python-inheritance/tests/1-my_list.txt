@@ -1,0 +1,37 @@
+Test file
+==================================================
+
+=========================
+Import Function
+=========================
+
+
+	>>> MyList = __import__('1-my_list').MyList
+
+=========================
+Prouves
+=========================
+
+	>>> my_list = MyList()
+	>>> my_list.append(-1)
+	>>> my_list.append(5)
+	>>> my_list.append(0)
+	>>> my_list.append(2)
+	>>> print(my_list)
+	[-1, 5, 0, 2]
+	>>> my_list.print_sorted()
+	[-1, 0, 2, 5]
+	>>> print(my_list)
+	[-1, 5, 0, 2]
+	>>> my_list.append(12345678908765432123456789)
+	>>> my_list.print_sorted()
+	[-1, 0, 2, 5, 12345678908765432123456789]
+	>>> my_list = MyList()
+	>>> my_list.append(True)
+	>>> my_list.append(False)
+	>>> my_list.append(True)
+	>>> my_list.append(-1)
+	>>> my_list.append(5)
+	>>> my_list.append(0)
+	>>> my_list.print_sorted()
+	[-1, False, 0, True, True, 5]

@@ -3,7 +3,7 @@ def pascal_triangle(n):
     """ Pascal Math"""
     res = []
     if n <= 0:
-        return tri
+        return res
     for row in range(n):
         for col in range(row + 1):
             if col == 0:

@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 from math import factorial
 
+
 def combination(n, r):
     """Pascal math way"""
-    return int(factorial(n) / (factorial(r) * factorial(n -r)))
+    return int(factorial(n) / (factorial(r) * factorial(n - r)))
+
 
 def pascal_triangle(n):
     """Concat each elemnt"""

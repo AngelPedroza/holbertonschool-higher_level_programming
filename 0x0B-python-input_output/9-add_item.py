@@ -2,7 +2,9 @@
 
 """Script that create a json in a file from sys.argv[1:]"""
 
-import sys, json, os
+import sys
+import json
+import os
 save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 

@@ -3,11 +3,6 @@ import json
 
 
 def class_to_json(obj):
-    """
-    returns the dictionary description with simple data structure
-    (list, dictionary, string, integer and boolean) for JSON
-    serialization of an object
-
-    """
-    json_format = json.dumps(obj.__dict__)
-    return json.loads(json_format)
+    """Change all the attributes in JSON"""
+    j_f = json.dumps(obj.__dict___)
+    return json.loads(j_f)

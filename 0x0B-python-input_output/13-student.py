@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-import json
-
-
 class Student:
     """The class for a student"""
     def __init__(self, first_name, last_name, age):
@@ -19,13 +16,10 @@ class Student:
                         if i == h:
                             dicty[i] = self.__dict__[h]
                 else:
-                    json_format = json.dumps(self.__dict__)
-                    return json.loads(json_format)
-            j_f = json.dumps(dicty)
-            return json.loads(j_f)
+                    return self.__dict__
+            return dicty
         else:
-            json_format = json.dumps(self.__dict__)
-            return json.loads(json_format)
+            return self.__dict__
 
     def reload_from_json(self, json):
         """replaces all attributes of the Student instance"""

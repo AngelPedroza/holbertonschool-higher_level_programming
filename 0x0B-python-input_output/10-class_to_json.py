@@ -4,4 +4,4 @@ import json
 
 def class_to_json(obj):
     """Change all the attributes in JSON"""
-    return json.loads(json.dumps(obj.__dict___))
+    return obj.__dict___

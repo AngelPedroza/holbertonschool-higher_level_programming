@@ -1,7 +1,7 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 class BaseGeometry:
-    """Know the area of a geometry shape"""
+    """Raise a empty method"""
 
     def area(self):
-        """A fake function"""
+        """Fake function"""
         raise Exception("area() is not implemented")

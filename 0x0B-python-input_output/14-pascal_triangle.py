@@ -2,11 +2,6 @@
 from math import factorial
 
 
-def combination(n, r):
-    """Pascal math way"""
-    return int(factorial(n) / (factorial(r) * factorial(n - r)))
-
-
 def pascal_triangle(n):
     """Concat each elemnt"""
     res = []
@@ -16,6 +11,6 @@ def pascal_triangle(n):
     for j in range(n):
         row = []
         for i in range(j + 1):
-            row.append(combination(j, i))
+            row.append(int(factorial(j) / (factorial(i) * factorial(j - i))))
         res.append(row)
     return res

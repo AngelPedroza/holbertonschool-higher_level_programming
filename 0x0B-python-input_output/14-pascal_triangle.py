@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-from math import factorial
-
-
 def pascal_triangle(n):
-    """Concat each elemnt"""
-    res = []
+    """ Pascal Math"""
+    tri =[]
     if n <= 0:
-        return res
-
-    for j in range(n):
-        row = []
-        for i in range(j + 1):
-            row.append(int(factorial(j) / (factorial(i) * factorial(j - i))))
-        res.append(row)
-    return res
+        return tri
+    for row in range(n):
+       for col in range(row+1):
+          if col == 0:
+             tri.append([1])
+          elif col == row:
+             tri[row].append(1)
+          else:
+             tri[row].append(tri[row-1][col]+tri[row-1][col-1])
+    return tri

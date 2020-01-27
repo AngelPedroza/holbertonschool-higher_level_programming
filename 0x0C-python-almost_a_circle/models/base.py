@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+"""
+Module for base class
+"""
 import json
 import os
-import csv
 
 
 class Base:
+    """This the base class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -73,37 +76,3 @@ class Base:
             instances += [cls.create(**i)]
 
         return instances
-
-    # @classmethod
-    # def save_to_file_csv(cls, list_objs):
-       # """Writes the CSV string representation of list_objs to a file"""
-        #new_list = []
-
-        #stri = "{}.csv".format(cls.__name__)
-        #with open(stri, newline='') as fd:
-           # if list_objs is None:
-            #    cvs_writer = csv.writer(fd)
-             #   csv_writer.writerow([])
-           # else:
-            #    for i in list_objs:
-             #       new_list += [i.to_dictionary()]
-              #  list = cls.to_json_string(new_list)
-               # fd.write(list)
-
-    #@classmethod
-    #def load_from_file_csv(cls):
-     #   """returns a list of instances"""
-      #  string = "{}.csv".format(cls.__name__)
-       # if os.path.exists(string) is False:
-        #    return []
-
-        #with open(string) as fd:
-         #   str_list = fd.read()
-
-        #cls_list = cls.from_json_string(str_list)
-        #instances = []
-
-        #for i in cls_list:
-         #   instances += [cls.create(**i)]
-
-        #return instances

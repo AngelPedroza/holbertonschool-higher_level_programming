@@ -29,7 +29,8 @@ class Base:
         list_dicts = []
         if json_string is None or len(json_string) == 0:
             return list_dicts
-        return json.loads(json_string)
+        else:
+            return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):

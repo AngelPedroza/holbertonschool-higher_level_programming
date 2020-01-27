@@ -17,10 +17,9 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """Transform to JSON format"""
-        new_list = []
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return new_list
+            return "[]"
 
         return json.dumps(list_dictionaries)
 

@@ -41,7 +41,7 @@ class Base:
         stri = "{}.json".format(cls.__name__)
         with open(stri, mode="w", encoding="utf-8") as fd:
             if list_objs is None:
-                fd.write(new_list)
+                fd.write("[]")
             else:
                 for i in list_objs:
                     new_list += [i.to_dictionary()]

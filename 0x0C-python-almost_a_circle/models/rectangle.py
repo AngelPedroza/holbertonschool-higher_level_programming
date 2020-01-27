@@ -57,7 +57,6 @@ class Rectangle(Base):
         else:
             self.__width = value
 
-
     @property
     def height(self):
         """Give the value of height"""
@@ -72,7 +71,6 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         else:
             self.__height = value
-
 
     @property
     def x(self):
@@ -93,6 +91,7 @@ class Rectangle(Base):
     def y(self):
         """Give the value of y"""
         return self.__y
+
     @y.setter
     def y(self, value):
         """Set a value of y private attribute"""
@@ -130,3 +129,12 @@ class Rectangle(Base):
                     if i == key:
                         setattr(self, i, value)
         # setattr call the setter method
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle"""
+        attr_list = ["id", "width", "height", "x", "y"]
+        newD = {}
+
+        for i in attr_list:
+            newD[i] = getattr(self, i)
+        return newD

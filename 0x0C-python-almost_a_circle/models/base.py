@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Module for base class
-"""
+"""Module for base class"""
 import json
 import os
 

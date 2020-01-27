@@ -27,7 +27,7 @@ class Base:
     def from_json_string(json_string):
         """Returns the list of the JSON string representation json_string"""
         list_dicts = []
-        if json_string is None:
+        if json_string is None or len(json_string) == 0:
             return list_dicts
         return json.loads(json_string)
 

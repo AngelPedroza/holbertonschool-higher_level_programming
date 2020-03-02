@@ -1,5 +1,4 @@
 -- Give ne the temp
-SOURCE temperatures.sql
 SELECT
 	city, AVG(value) AS avg_temp
 FROM

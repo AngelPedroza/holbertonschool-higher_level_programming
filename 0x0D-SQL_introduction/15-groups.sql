@@ -1,6 +1,6 @@
 -- list the numbers of records
 SELECT
-	score, COUNT(*)number
+	score, COUNT(score) AS number
 FROM
 	second_table
 GROUP BY

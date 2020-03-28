@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Print a string"""
 import MySQLdb
 import sys
 
@@ -36,5 +36,5 @@ for i in range(len(my_list)):
 print(str1)
 
 # Close the connection
-cur.close();
+cur.close()
 db.close()

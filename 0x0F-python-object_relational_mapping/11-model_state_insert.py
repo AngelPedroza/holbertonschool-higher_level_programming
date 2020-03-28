@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-A query with like statement
+"""Start link class to table in database
 """
 if __name__ == '__main__':
     import sys
@@ -17,8 +16,12 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).filter(State.name.like("%a%"))
-    for state in query.order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+
+    new_name = "Louisiana"
+    new_state = State(name=new_name)
+    session.add(new_state)
+    session.commit()
+
+    print(new_state.id)
 
     session.close()

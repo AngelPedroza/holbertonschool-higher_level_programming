@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Query SQL injection safe"""
 import MySQLdb
 import sys
 
@@ -19,5 +19,5 @@ cur.execute(query, (sys.argv[4], ))
 for row in cur.fetchall():
     print(row)
 
-cur.close();
+cur.close()
 db.close()

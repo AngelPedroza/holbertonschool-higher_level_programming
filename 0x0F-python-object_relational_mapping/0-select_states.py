@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""This file conect an DB and make a query"""
 import MySQLdb
 import sys
 
@@ -18,5 +18,5 @@ cur.execute('SELECT id, name FROM states ORDER BY id ASC;')
 for row in cur.fetchall():
     print(row)
 
-cur.close();
+cur.close()
 db.close()

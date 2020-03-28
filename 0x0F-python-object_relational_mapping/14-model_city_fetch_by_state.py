@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""
-A query with like statement
+"""Start link class to table in database
 """
 if __name__ == '__main__':
     import sys
     from model_state import Base, State
+    from model_city import City
     from sqlalchemy.orm import sessionmaker
     from sqlalchemy import (create_engine)
 
@@ -17,8 +17,8 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).filter(State.name.like("%a%"))
-    for state in query.order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+    query = session.query(State, City).join(City).order_by(City.id).all()
+    for state, city in query:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()

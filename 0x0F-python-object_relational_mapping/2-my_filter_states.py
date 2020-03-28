@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Query name"""
 import MySQLdb
 import sys
 
@@ -20,5 +20,5 @@ cur.execute(query)
 for row in cur.fetchall():
     print(row)
 
-cur.close();
+cur.close()
 db.close()

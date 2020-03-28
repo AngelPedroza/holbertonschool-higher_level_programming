@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Make a query Like"""
 import MySQLdb
 import sys
 
@@ -13,10 +13,11 @@ db = MySQLdb.connect(host="localhost",
 cur = db.cursor()
 
 # Execute the query
-cur.execute('SELECT id, name FROM states WHERE name LIKE "N%" ORDER BY id ASC;')
+cur.execute('SELECT id, name FROM states\
+             WHERE name LIKE "N%" ORDER BY id ASC;')
 
 for row in cur.fetchall():
     print(row)
 
-cur.close();
+cur.close()
 db.close()

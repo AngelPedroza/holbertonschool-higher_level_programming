@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Make a join query"""
 import MySQLdb
 import sys
 
@@ -24,5 +24,5 @@ cur.execute(query)
 for row in cur.fetchall():
     print(row)
 
-cur.close();
+cur.close()
 db.close()

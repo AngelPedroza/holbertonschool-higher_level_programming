@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A query with like statement
+Update the table
 """
 if __name__ == '__main__':
     import sys
@@ -17,8 +17,8 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).filter(State.name.like("%a%"))
-    for state in query.order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+    query = session.query(State).filter_by(id=2)
+    query.update({State.name: "New Mexico"}, synchronize_session=False)
+    session.commit()
 
     session.close()

@@ -13,8 +13,8 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Execute the query
-    query = "SELECT id, name FROM states WHERE name='{}' ORDER BY id ASC;".format(
-        sys.argv[4])
+    query = "SELECT id, name FROM states WHERE name='{}'\
+    COLLATE latin1_general_cs ORDER BY states.id ASC;".format(sys.argv[4])
     cur.execute(query)
     for row in cur.fetchall():
         print(row)

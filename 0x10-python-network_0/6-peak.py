@@ -1,36 +1,24 @@
 #!/usr/bin/env python3
 """Find the peak in an array"""
 
+def FindAPeak(arr, i, j):
+    mid = int((i + j) / 2)
+    # if mid element is peak
+    if (mid == len(arr)-1 or arr[mid] >= arr[mid+1]) and (mid == 0 or arr[mid] >= arr[mid-1]):
+        return arr[mid]
+    # when your peak exists in the right half
+    if arr[mid] < arr[mid+1] and mid+1 < len(arr):
+        return FindAPeak(arr, mid+1, j)
+    # when your peak exists in the left half
+    else:
+        return FindAPeak(arr, i, mid-1)
+
+
 def find_peak(list_of_integers):
-    """Funtion to find the peak"""
     l = list_of_integers
 
     if len(l) == 0:
         return None
 
-    res = 0
-    r_left = 0
-    r_right = 0
-    flag = 0
-    for n in range(len(l) - 1):
-        if l[n - 1] <= l[n] and l[n + 1] <= l[n] and flag == 0:
-            res = l[n]
-
-            if r_left < 0:
-                r_left *= -1
-            if r_right < 0:
-                r_right *= -1
-
-            if r_left < l[n] - l[n - 1]:
-                r_left = l[n] - l[n - 1]
-                flag = 1
-            else:
-                flag = 0
-
-            if r_right < l[n] - l[n + 1]:
-                r_right = l[n] - l[n + 1]
-                flag = 1
-            else:
-                flag = 0
-
-    return res
+    peak = FindAPeak(l, 0, len(l) -1)
+    return peak

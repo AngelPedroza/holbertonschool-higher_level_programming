@@ -4,7 +4,8 @@
 def FindAPeak(arr, i, j):
     mid = int((i + j) / 2)
     # if mid element is peak
-    if (mid == len(arr)-1 or arr[mid] >= arr[mid+1]) and (mid == 0 or arr[mid] >= arr[mid-1]):
+    if (mid == len(arr)-1 or arr[mid] >= arr[mid+1]) and\
+    (mid == 0 or arr[mid] >= arr[mid-1]):
         return arr[mid]
     # when your peak exists in the right half
     if arr[mid] < arr[mid+1] and mid+1 < len(arr):

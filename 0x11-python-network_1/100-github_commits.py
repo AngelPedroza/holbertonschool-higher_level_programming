@@ -25,5 +25,5 @@ if __name__ == "__main__":
                 name = author.get('name')
 
             print("{}: {}".format(sha, name))
-    except:
-         print("Not a valid JSON")
+    except ValueError:
+        print("Not a valid JSON")

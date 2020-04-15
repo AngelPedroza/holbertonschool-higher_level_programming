@@ -12,12 +12,18 @@ if __name__ == "__main__":
         'https://api.github.com/repos/{}/{}/commits'.format(user, repo)
     )
 
+    try:
+        data = r.json()
+        # find the sha and enter to the commit dic
+        for dic in data[:10]:
+            sha = dic.get('sha')
+            sha_key = dic.get('commit')
 
-    data = r.json()
-    #find the sha and enter to the commit dic
-    for dic in data[:10]:
-        for sha_key, sha_value in dic.items():
-            if sha_key == "sha":
-                sha = sha_value
-            if sha_key == "commit":
-                    print("{}: {}".format(sha, sha_value['author'].get('name')))
+            if sha_key:
+                author = sha_key.get('author')
+            if author:
+                name = author.get('name')
+
+            print("{}: {}".format(sha, name))
+    except:
+         print("Not a valid JSON")

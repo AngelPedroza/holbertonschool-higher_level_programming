@@ -1,4 +1,5 @@
 #!/usr/bin/node
-console.log('C is fun');
-console.log('Pyhton is cool');
-console.log('Javascript is amazing');
+const array = ['C is fun', 'Pyhton is cool', 'Javascript is amazing'];
+for (let i = 0; i < array.length; i++) {
+  console.log(array[i]);
+}

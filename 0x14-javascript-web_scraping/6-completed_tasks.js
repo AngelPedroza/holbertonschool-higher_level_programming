@@ -8,8 +8,11 @@ request.get(url, function (err, response, body) {
   } else {
     const todos = JSON.parse(body);
     for (let i = 0; i < todos.length; i++) {
-      if (newDict[todos[i].userId] === undefined) { newDict[todos[i].userId] = 0; }
-      if (todos[i].completed === true) { newDict[todos[i].userId] += 1; }
+      if (todos[i].completed === true) {
+	if (newDict[todos[i].userId] === undefined) {
+	  newDict[todos[i].userId] = 0; }
+      }
+      newDict[todos[i].userId] += 1;
     }
     console.log(newDict);
   }

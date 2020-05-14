@@ -1,9 +1,6 @@
-window.onload = function() {
+window.onload = function () {
   const url = 'https://fourtonfish.com/hellosalut/?lang=fr';
-
-  fetch(url).then(function(response) {
-    return response.json();
-  }).then(function(myJson) {
-    $("DIV#hello").text(myJson["hello"]);
+  $.get(url, function (data) {
+    $('DIV#hello').text(data.hello);
   });
-}
+};

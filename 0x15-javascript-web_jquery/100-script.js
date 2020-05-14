@@ -1,4 +1,4 @@
-window.onload = function() {
-  let head = document.querySelector("header");
-  head.style.color = "red";
-}
+window.onload = function () {
+  const head = document.querySelector('header');
+  head.style.color = 'red';
+};
